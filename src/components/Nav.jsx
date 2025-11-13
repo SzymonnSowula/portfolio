@@ -1,22 +1,23 @@
 import React from 'react'
-
+import { useTranslation } from 'react-i18next'; 
 function Nav() {
+    const { t } = useTranslation();
   return (
-    <aside className="nav-sidebar">
+ <aside className="nav-sidebar">
       <div>
         <div className="nav-header">
           <h1>SZYMON SOWULA</h1>
-          <p className="subtitle">Web Developer</p>
+        
+          <p className="subtitle">{t('subtitle')}</p> 
         </div>
         <ul className="nav-links">
-          <li><a href="#o-mnie">O mnie</a></li>
-          <li><a href="#projekty">Projekty</a></li>
-          <li><a href="#edukacja">Edukacja</a></li>
-          <li><a href="#kursy">Kursy</a></li>
+         
+          <li><a href="#o-mnie">{t('nav.about')}</a></li>
+          <li><a href="#projekty">{t('nav.projects')}</a></li>
+          <li><a href="#edukacja">{t('nav.education')}</a></li>
+          <li><a href="#kursy">{t('nav.courses')}</a></li>
         </ul>
       </div>
-      
-      {/* ZAKTUALIZOWANA STOPKA Z LINKAMI SPOŁECZNOŚCIOWYMI */}
       <footer className="nav-footer">
         <a 
           href="https://github.com/SzymonnSowula" 

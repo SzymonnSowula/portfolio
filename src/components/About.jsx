@@ -1,29 +1,28 @@
 import React from 'react'
 import Section from './Section'
+import { useTranslation } from 'react-i18next'; 
 
-// Twoje umiejętności
 const skills = [
   'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React',
   'React Native', 'Next.js', 'Tailwind CSS', 'Supabase',
-  'MongoDB', 'SQL', 'PHP','Shopify'
+  'MongoDB', 'SQL', 'PHP', 'Shopify'
 ];
 
 function About() {
+  const { t } = useTranslation(); 
+
   return (
-    <Section title="O Mnie" id="o-mnie">
+  
+    <Section title={t('about.title')} id="o-mnie">
       <p className="about-text">
-        Cześć, jestem Szymon. Mam 18 lat i jestem pasjonatem programowania, 
-        specjalizującym się w technologiach front-endowych. 
-        Tworzenie czystych, wydajnych i estetycznych aplikacji webowych to moja główna domena.
+        {t('about.p1')} 
       </p>
       <p className="about-text">
-        Obecnie jestem w 4. klasie na kierunku Technik Programista w 
-        Zespole Szkół Nr 3 im. Antoniego Kocjana. 
-        Każdego dnia poszerzam swoją wiedzę i szukam nowych wyzwań, 
-        aby stawać się lepszym deweloperem.
+        {t('about.p2')} 
       </p>
       
-      <h3>Technologie, z którymi pracuję:</h3>
+      <h3>{t('about.skillsTitle')}</h3> 
+      
       <div className="skills-grid">
         {skills.map(skill => (
           <div key={skill} className="skill-item">

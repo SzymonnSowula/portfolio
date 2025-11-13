@@ -1,0 +1,35 @@
+{
+  "subtitle": "Web Developer",
+  "nav": {
+    "about": "O mnie",
+    "projects": "Projekty",
+    "education": "Edukacja",
+    "courses": "Kursy"
+  },
+  "about": {
+    "title": "O Mnie",
+    "p1": "Cześć, jestem Szymon. Mam 18 lat i jestem pasjonatem programowania, specjalizującym się w technologiach front-endowych. Tworzenie czystych, wydajnych i estetycznych aplikacji webowych to moja główna domena.",
+    "p2": "Obecnie jestem w 4. klasie na kierunku Technik Programista w Zespole Szkół Nr 3 im. Antoniego Kocjana. Każdego dnia poszerzam swoją wiedzę i szukam nowych wyzwań, aby stawać się lepszym deweloperem.",
+    "skillsTitle": "Technologie, z którymi pracuję:"
+  },
+    "education": {
+        "year": "2021-2025(obecnie)",
+        "p3": "Zespół Szkół Nr 3 im. Antoniego Kocjana",
+        "p4": "Kierunek: Technik Programista (Klasa 4)"
+    },
+    "courses": {
+    "title": "Kursy i Certyfikaty",
+    "items": [
+      {
+        "title": "Przykładowy Kurs np. 'Advanced React'",
+        "issuer": "Udemy / Coursera / Inna platforma",
+        "date": "2024"
+      },
+      {
+        "title": "Certyfikat np. 'JavaScript Algorithms and Data Structures'",
+        "issuer": "freeCodeCamp",
+        "date": "2023"
+      }
+    ]
+  }
+}

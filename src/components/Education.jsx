@@ -1,16 +1,20 @@
 import React from 'react'
 import Section from './Section'
+import { useTranslation } from 'react-i18next'; 
 
 function Education() {
+  const { t } = useTranslation();
+
   return (
-    <Section title="Edukacja" id="edukacja">
+   
+    <Section title={t('education.title')} id="edukacja">
       <ul className="item-list">
         <li className="list-item">
-          <span className="item-date">2021 – 2025 (Oczekiwane)</span>
-          <div className="item-title">Zespół Szkół Nr 3 im. Antoniego Kocjana</div>
-          <div className="item-subtitle">Kierunek: Technik Programista (Klasa 4)</div>
+        
+          <span className="item-date">{t('education.year')}</span>
+          <div className="item-title">{t('education.p3')}</div>
+          <div className="item-subtitle">{t('education.p4')}</div>
         </li>
-        {/* Możesz dodać tu więcej szkół w przyszłości */}
       </ul>
     </Section>
   )
