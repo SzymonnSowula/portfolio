@@ -1,0 +1,348 @@
+/* 1. CSS Reset & Global Variables */
+:root {
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+
+  /* Colors */
+  --color-black: #111111;
+  --color-white: #fefefe;
+  --color-gray: #eeeeee;
+  --color-gray-dark: #888;
+  --color-accent: #0A7BFF;
+
+  /* Grid & Spacing */
+  --grid-unit: 1.5rem; /* 24px */
+  --content-padding: calc(var(--grid-unit) * 2);
+  --nav-width: 300px;
+}
+/* W main.css */
+
+.project-card {
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  padding: var(--grid-unit);
+
+  /* Ustawiamy domyślny stan i płynne przejście */
+  transition: 
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+
+  /* Dodajemy to dla płynnego powrotu */
+  transform: perspective(1000px) rotateX(0) rotateY(0);
+}
+
+.project-card:hover {
+  box-shadow: 15px 15px 0 var(--color-accent); /* Użyjmy koloru akcentu (niebieskiego) dla cienia! */
+
+  /* Efekt "podniesienia" i lekkiego przechyłu */
+  transform: perspective(1000px) translate(-10px, -10px) rotateX(2deg) rotateY(-3deg);
+}
+
+
+.nav-footer {
+  margin-top: var(--grid-unit);
+  display: flex; /* Używamy flexboxa */
+  flex-direction: column; /* Linki jeden pod drugim */
+  gap: 0.5rem; /* Odstęp między linkami */
+}
+
+/* ZMIENIŁEM NAZWĘ Z .github-link NA .social-link */
+.social-link {
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.25rem 0; /* Mniejszy padding */
+  border-bottom: 2px solid var(--color-black);
+  align-self: flex-start; /* Dopasuj szerokość do tekstu */
+  transition: border-color 0.2s ease; /* Dodana płynna zmiana */
+}
+.social-link:hover {
+  border-bottom-color: var(--color-accent); /* Używamy teraz koloru akcentu */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* 2. Main App Layout */
+.app-container {
+  display: grid;
+  grid-template-columns: var(--nav-width) 1fr;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: var(--content-padding);
+  
+  /* TO JEST ORYGINALNY ELEMENT: subtelna siatka w tle */
+  /* Usuń, jeśli wolisz czystą biel */
+  background-image: 
+    linear-gradient(to right, var(--color-gray) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-gray) 1px, transparent 1px);
+  background-size: var(--grid-unit) var(--grid-unit);
+}
+
+/* 3. Navigation Sidebar (Nav.jsx) */
+.nav-sidebar {
+  padding: var(--content-padding);
+  background: var(--color-white);
+  border-right: 2px solid var(--color-black);
+  
+  /* Przyklejona nawigacja */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  
+  /* Flexbox do ułożenia góra/dół */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-header h1 {
+  font-size: 2.5rem; /* 40px */
+  margin-bottom: 0.25rem;
+  /* Można rozbić na dwie linie, jeśli wolisz */
+  /* line-height: 1.1; */
+}
+
+.nav-header .subtitle {
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: var(--grid-unit);
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li a {
+  display: block;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  /* Efekt hover w stylu Swiss */
+  transition: transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  transform: translateX(10px);
+  color: var(--color-accent);
+}
+
+.nav-footer {
+  margin-top: var(--grid-unit);
+}
+
+.github-link {
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--color-black);
+}
+.github-link:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* 4. Section Component (Section.jsx) */
+.section {
+  padding-top: var(--grid-unit); /* Drobny padding dla kotwic # */
+  margin-bottom: calc(var(--grid-unit) * 3);
+}
+
+.section-title {
+  font-size: 3rem; /* 48px */
+  text-transform: uppercase;
+  margin-bottom: var(--grid-unit);
+  padding-bottom: 0.5rem;
+  
+  /* Klasyczny element Swiss: linia nie idzie do końca */
+  border-bottom: 3px solid var(--color-black);
+  width: 40%;
+}
+
+/* 5. About Section (About.jsx) */
+.about-text {
+  font-size: 1.1rem;
+  max-width: 70ch; /* Dobra czytelność */
+  margin-bottom: var(--grid-unit);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-top: var(--grid-unit);
+}
+
+.skill-item {
+  background: var(--color-gray);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono); /* Czcionka mono dla technologii */
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.skill-item:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* 6. Projects Section (Projects.jsx) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Jeden projekt pod drugim */
+  gap: var(--grid-unit);
+}
+
+.project-card {
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  padding: var(--grid-unit);
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 10px 10px 0 var(--color-black);
+  transform: translate(-5px, -5px);
+}
+
+.project-card h3 {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+}
+
+.project-description {
+  margin: 0.5rem 0;
+  max-width: 65ch;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.project-links a {
+  font-weight: 700;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  /* Fajna linia przy hover */
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.2s ease;
+}
+
+.project-links a:hover {
+  background-size: 100% 2px;
+  color: var(--color-black); /* Reset koloru z globalnego 'a' */
+}
+
+/* 7. Education & Courses (Education.jsx, Courses.jsx) */
+.item-list {
+  list-style: none;
+}
+
+.list-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.item-subtitle {
+  font-size: 1rem;
+  color: var(--color-gray-dark);
+  font-weight: 400;
+}
+
+.item-date {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  float: right; /* Wyrównanie do prawej */
+}
+
+/* 8. Responsywność (Mobile-first) */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
+  }
+  
+  .nav-sidebar {
+    position: static; /* Usuwamy przyklejenie */
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid var(--color-black);
+  }
+  
+  .main-content {
+    /* Usuwamy siatkę w tle na mobile */
+    background-image: none;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    width: 60%;
+  }
+
+  .item-date {
+    float: none;
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
