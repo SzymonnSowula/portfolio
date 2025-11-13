@@ -22,16 +22,16 @@ const myProjects = [
   },
     {
     title: "FreeAi",
-    description: "An AI tool that allows you to translate provided text or video into another language. Users can select the source and target languages.",
+    description: "An AI tool that allows you to translate provided text into another language. Users can select the source and target languages.",
     tech: ["React", "AI API?"], // Uzupełnij
     links: {
-      github: "https://github.com/SzymonnSowula/...", // UZUPEŁNIJ
+      github: "https://github.com/SzymonnSowula/...", 
       live: "https://freeaisite.netlify.app/"
     }
   },
   {
     title: "BeautyMania",
-    description: "A professional beauty salon in Słupsk specializing in nail and eyelash styling. Created on behalf of a client.",
+    description: "A professional beauty salon in Skała specializing in nail and eyelash styling. Created on behalf of a client.",
     tech: ["React", "Node.js"], // Uzupełnij
     links: {
       github: "https://github.com/SzymonnSowula/...", // UZUPEŁNIJ
