@@ -7,7 +7,7 @@ function Education() {
 
   return (
    
-    <Section title={t('education.title')} id="edukacja">
+    <Section title={t('education.title')} id="edukacja">  
       <ul className="item-list">
         <li className="list-item">
         
