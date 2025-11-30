@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
         display: 'block',
         background: 'var(--color-surface)',
         borderRadius: '24px',
-        padding: '3rem',
+        padding: 'clamp(1.5rem, 4vw, 3rem)',
         border: '1px solid var(--color-border)',
         position: 'relative',
         overflow: 'hidden',
@@ -31,10 +31,11 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
           display: 'flex', 
           justifyContent: 'space-between', 
           alignItems: 'flex-start',
-          marginBottom: '1.5rem'
+          marginBottom: '1.5rem',
+          gap: '1rem'
         }}>
           <h3 style={{ 
-            fontSize: '2.5rem', 
+            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', 
             color: 'var(--color-text-main)',
             margin: 0
           }}>
@@ -42,31 +43,38 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
           </h3>
           <div style={{
             background: 'var(--color-surface-hover)',
-            padding: '1rem',
+            padding: 'clamp(0.75rem, 2vw, 1rem)',
             borderRadius: '50%',
-            border: '1px solid var(--color-border)'
+            border: '1px solid var(--color-border)',
+            minWidth: 'clamp(2.5rem, 5vw, 3.5rem)',
+            height: 'clamp(2.5rem, 5vw, 3.5rem)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: 'clamp(1rem, 2vw, 1.25rem)'
           }}>
             ↗
           </div>
         </div>
         
         <p style={{ 
-          fontSize: '1.25rem', 
+          fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', 
           color: 'var(--color-text-muted)', 
           marginBottom: '2rem',
-          maxWidth: '600px'
+          maxWidth: '600px',
+          lineHeight: '1.6'
         }}>
           {description}
         </p>
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 'clamp(0.5rem, 1.5vw, 1rem)', flexWrap: 'wrap' }}>
           {tags.map(tag => (
             <span key={tag} style={{
-              padding: '0.5rem 1rem',
+              padding: 'clamp(0.4rem, 1vw, 0.5rem) clamp(0.75rem, 1.5vw, 1rem)',
               borderRadius: '100px',
               border: '1px solid var(--color-border)',
               color: 'var(--color-text-main)',
-              fontSize: '0.9rem'
+              fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)'
             }}>
               {tag}
             </span>
@@ -80,8 +88,8 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
         top: '50%',
         right: '-10%',
         transform: 'translateY(-50%)',
-        width: '400px',
-        height: '400px',
+        width: 'clamp(200px, 50vw, 400px)',
+        height: 'clamp(200px, 50vw, 400px)',
         background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
         opacity: 0.1,
         filter: 'blur(60px)',

@@ -13,7 +13,7 @@ const BentoItem = ({ children, className = '', delay = 0 }) => (
     style={{
       background: 'var(--color-surface)',
       borderRadius: '24px',
-      padding: '2rem',
+      padding: 'clamp(1.5rem, 3vw, 2rem)',
       border: '1px solid var(--color-border)',
       display: 'flex',
       flexDirection: 'column',
@@ -31,30 +31,30 @@ const About = () => {
     <Section id="about" title={t('about.title')}>
       <div style={{ 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
         gap: '1.5rem',
         marginTop: '2rem'
       }}>
         {/* Main Bio */}
-        <BentoItem className="col-span-2" style={{ gridColumn: 'span 2' }}>
-          <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
+        <BentoItem className="col-span-2" style={{ gridColumn: window.innerWidth > 640 ? 'span 2' : 'span 1' }}>
+          <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', marginBottom: '1rem' }}>
             {t('about.heading')}
           </h3>
-          <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.1rem)', color: 'var(--color-text-muted)' }}>
             {t('about.description')}
           </p>
         </BentoItem>
 
         {/* Tech Stack */}
         <BentoItem delay={0.1}>
-          <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)' }}>{t('about.stackTitle')}</h4>
+          <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)', fontSize: 'clamp(1rem, 2vw, 1.125rem)' }}>{t('about.stackTitle')}</h4>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {['React', 'Next.js', 'React Native', 'TypeScript', 'Node.js', 'Express.js', 'Tailwind CSS'].map(tech => (
               <span key={tech} style={{
                 background: 'rgba(255,255,255,0.05)',
-                padding: '0.5rem 1rem',
+                padding: 'clamp(0.4rem, 1vw, 0.5rem) clamp(0.75rem, 1.5vw, 1rem)',
                 borderRadius: '100px',
-                fontSize: '0.9rem',
+                fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)',
                 border: '1px solid var(--color-border)'
               }}>
                 {tech}
@@ -65,8 +65,8 @@ const About = () => {
 
         {/* Stats or Soft Skills */}
         <BentoItem delay={0.2}>
-          <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)' }}>{t('about.focusTitle')}</h4>
-          <ul style={{ color: 'var(--color-text-muted)', lineHeight: '1.8' }}>
+          <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)', fontSize: 'clamp(1rem, 2vw, 1.125rem)' }}>{t('about.focusTitle')}</h4>
+          <ul style={{ color: 'var(--color-text-muted)', lineHeight: '1.8', fontSize: 'clamp(0.9rem, 1.5vw, 1rem)' }}>
             <li>🛒 {t('about.focus.ecommerce')}</li>
             <li>🔌 {t('about.focus.api')}</li>
             <li>📈 {t('about.focus.scalable')}</li>
