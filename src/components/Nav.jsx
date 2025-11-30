@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 const Nav = () => {
@@ -23,17 +23,15 @@ const Nav = () => {
   return (
     <>
       {/* Navigation */}
-      <motion.nav 
+      <nav 
         className="nav-floating"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         style={{
           position: 'relative',
           margin: '2rem auto',
           zIndex: 100,
-          background: 'rgba(18, 18, 18, 0.8)',
-          backdropFilter: 'blur(12px)',
+          background: 'rgba(18, 18, 18, 0.95)',
+          // Remove heavy backdrop-filter on mobile
+          backdropFilter: window.innerWidth > 768 ? 'blur(12px)' : 'none',
           padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem)',
           borderRadius: '100px',
           border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -103,7 +101,7 @@ const Nav = () => {
             {i18n.language === 'pl' ? 'EN' : 'PL'}
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>

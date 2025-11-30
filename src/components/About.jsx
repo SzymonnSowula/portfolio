@@ -35,10 +35,17 @@ const About = () => {
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
         gap: '1.5rem',
-        marginTop: '2rem'
+        marginTop: '2rem',
+        minHeight: '400px'
       }}>
-        {/* Main Bio */}
-        <BentoItem className="col-span-2" style={{ gridColumn: window.innerWidth > 640 ? 'span 2' : 'span 1' }}>
+        {/* Main Bio - LCP Element */}
+        <BentoItem 
+          className="col-span-2" 
+          style={{ 
+            gridColumn: window.innerWidth > 640 ? 'span 2' : 'span 1',
+            minHeight: '200px'
+          }}
+        >
           <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', marginBottom: '1rem' }}>
             {t('about.heading')}
           </h3>
@@ -48,7 +55,7 @@ const About = () => {
         </BentoItem>
 
         {/* Tech Stack */}
-        <BentoItem delay={0.1}>
+        <BentoItem delay={0.1} style={{ minHeight: '180px' }}>
           <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)', fontSize: 'clamp(1rem, 2vw, 1.125rem)' }}>{t('about.stackTitle')}</h4>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {['React', 'Next.js', 'React Native', 'TypeScript', 'Node.js', 'Express.js', 'Tailwind CSS'].map(tech => (
@@ -66,7 +73,7 @@ const About = () => {
         </BentoItem>
 
         {/* Stats or Soft Skills */}
-        <BentoItem delay={0.2}>
+        <BentoItem delay={0.2} style={{ minHeight: '180px' }}>
           <h4 style={{ marginBottom: '1rem', color: 'var(--color-accent)', fontSize: 'clamp(1rem, 2vw, 1.125rem)' }}>{t('about.focusTitle')}</h4>
           <ul style={{ color: 'var(--color-text-muted)', lineHeight: '1.8', fontSize: 'clamp(0.9rem, 1.5vw, 1rem)' }}>
             <li>🛒 {t('about.focus.ecommerce')}</li>
