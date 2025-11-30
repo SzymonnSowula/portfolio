@@ -1,41 +1,85 @@
 {
-  "subtitle": "Web Developer",
   "nav": {
-    "about": "About me",
+    "about": "About",
     "projects": "Projects",
     "education": "Education",
-    "courses": "Courses"
+    "courses": "Courses",
+    "contact": "Contact"
   },
   "about": {
     "title": "About Me",
-    "p1": "Hi, I'm Szymon. I am 18 years old and a programming enthusiast specializing in front-end technologies. Creating clean, efficient, and aesthetic web applications is my main domain.",
-    "p2": "Currently, I am in the 4th grade of the Programming Technician course at the Zespół Szkół Nr 3 im. Antoniego Kocjana. Every day I expand my knowledge and seek new challenges to become a better developer.",
-    "skillsTitle": "Technologies I work with:"
-  },
- "education": {
-        "title": "Education",
-        "year": "2021-2025(Currently)",
-        "p3": "Zespół Szkół Nr 3 im. Antoniego Kocjana",
-        "p4": "Computer Programming Technician, 4th-year student of Technical Secondary School"
-    },
-"courses": {
-    "title": "Courses & Certificates",
-    "items": [
-      {
-        "title": "Example Course e.g. 'Advanced React'",
-        "issuer": "Udemy / Coursera / Other platform",
-        "date": "2024"
-      },
-      {
-        "title": "Certificate e.g. 'JavaScript Algorithms and Data Structures'",
-        "issuer": "freeCodeCamp",
-        "date": "2023"
-      }
-    ]
+    "heading": "Junior Web Developer based in Poland.",
+    "description": "Self-taught developer specializing in modern JavaScript ecosystems and e-commerce solutions. Experienced in building and deploying web applications with a focus on user experience, API integrations, and scalable architecture.",
+    "stackTitle": "Stack",
+    "focusTitle": "Focus",
+    "focus": {
+      "ecommerce": "E-commerce Solutions",
+      "api": "API Integrations",
+      "scalable": "Scalable Architecture"
+    }
   },
   "projects": {
-    "title": "Projects",
-    "github": "GitHub",
-    "live": "Live"
+    "title": "Selected Work",
+    "wizerunkowo": {
+      "title": "Wizerunkowo",
+      "description": "Turn any selfie into studio‑quality business headshots using AI powered by Google's Nano Banana Pro, delivered instantly to user dashboard."
+    },
+    "whop": {
+      "title": "Whop Integration App",
+      "description": "Creator-focused platform leveraging Whop SDK and OAuth authentication. Secure user authentication, payment integration, and community features for social media creators exploring monetization strategies."
+    },
+    "lifequest": {
+      "title": "LifeQuest",
+      "description": "An application for tracking daily routines and setting goals. Connected to a Supabase database."
+    },
+    "streamline": {
+      "title": "StreamLine",
+      "description": "Boost productivity and simplify your processes with our intuitive SaaS platform. Optimized for speed, security by design, and offers insightful analytics."
+    },
+    "freeai": {
+      "title": "FreeAi",
+      "description": "An AI tool that allows you to translate provided text into another language. Users can select the source and target languages."
+    }
+  },
+  "education": {
+    "title": "Education",
+    "school": {
+      "date": "2022 - 2025",
+      "title": "Technical School of Computer Programming",
+      "subtitle": "Technik Programista",
+      "description": "Student focusing on Computer Programming. Earned professional qualification certificate INF0.3 Technik Programista."
+    }
+  },
+  "courses": {
+    "title": "Courses & Certifications",
+    "items": {
+      "react": {
+        "date": "2024",
+        "title": "Udemy React Course",
+        "subtitle": "Udemy",
+        "description": "Comprehensive React development course covering modern patterns, hooks, and best practices."
+      },
+      "ai": {
+        "date": "2024",
+        "title": "AI dla grafików",
+        "subtitle": "Professional Certification",
+        "description": "Fundamentals of artificial intelligence focused on AI image and video generation techniques."
+      },
+      "inf03": {
+        "date": "2024",
+        "title": "Certyfikat kwalifikacji zawodowej INF0.3",
+        "subtitle": "Technik Programista",
+        "description": "Professional qualification certificate for Computer Programming Technician."
+      },
+      "ad": {
+        "date": "2023",
+        "title": "Zarządzanie usługą Active Directory",
+        "subtitle": "Microsoft Windows Server",
+        "description": "Active Directory service management in Microsoft Windows Server environment."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact"
   }
 }

@@ -1,41 +1,85 @@
 {
-  "subtitle": "Web Developer",
   "nav": {
     "about": "O mnie",
     "projects": "Projekty",
     "education": "Edukacja",
-    "courses": "Kursy"
+    "courses": "Kursy",
+    "contact": "Kontakt"
   },
   "about": {
     "title": "O Mnie",
-    "p1": "Cześć, jestem Szymon. Mam 18 lat i jestem pasjonatem programowania, specjalizującym się w technologiach front-endowych. Tworzenie czystych, wydajnych i estetycznych aplikacji webowych to moja główna domena.",
-    "p2": "Obecnie jestem w 4. klasie na kierunku Technik Programista w Zespole Szkół Nr 3 im. Antoniego Kocjana. Każdego dnia poszerzam swoją wiedzę i szukam nowych wyzwań, aby stawać się lepszym deweloperem.",
-    "skillsTitle": "Technologie, z którymi pracuję:"
+    "heading": "Junior Web Developer z Polski.",
+    "description": "Samouczący się developer specjalizujący się w nowoczesnych ekosystemach JavaScript i rozwiązaniach e-commerce. Doświadczony w budowaniu i wdrażaniu aplikacji webowych z naciskiem na doświadczenie użytkownika, integracje API i skalowalną architekturę.",
+    "stackTitle": "Stack",
+    "focusTitle": "Specjalizacja",
+    "focus": {
+      "ecommerce": "Rozwiązania E-commerce",
+      "api": "Integracje API",
+      "scalable": "Skalowalna Architektura"
+    }
   },
-    "education": {
-        "title": "Edukacja",
-        "year": "2021-2025(obecnie)",
-        "p3": "Zespół Szkół Nr 3 im. Antoniego Kocjana",
-        "p4": "Kierunek: Technik Programista (Klasa 4)"
-    },
-    "courses": {
-    "title": "Kursy i Certyfikaty",
-    "items": [
-      {
-        "title": "Przykładowy Kurs np. 'Advanced React'",
-        "issuer": "Udemy / Coursera / Inna platforma",
-        "date": "2024"
-      },
-      {
-        "title": "Certyfikat np. 'JavaScript Algorithms and Data Structures'",
-        "issuer": "freeCodeCamp",
-        "date": "2023"
-      }
-    ]
-  },  
   "projects": {
-    "title": "Projekty",
-    "github": "GitHub",
-    "live": "Live"
+    "title": "Wybrane Projekty",
+    "wizerunkowo": {
+      "title": "Wizerunkowo",
+      "description": "Zamień każde selfie w profesjonalne zdjęcia biznesowe dzięki AI (Google's Nano Banana Pro)."
+    },
+    "whop": {
+      "title": "Whop Integration App",
+      "description": "Platforma dla twórców wykorzystująca Whop SDK i uwierzytelnianie OAuth. Bezpieczna autoryzacja użytkowników, integracja płatności i funkcje społecznościowe dla twórców mediów społecznościowych eksplorujących strategie monetyzacji."
+    },
+    "lifequest": {
+      "title": "LifeQuest",
+      "description": "Aplikacja do śledzenia codziennych rutyn i wyznaczania celów. Połączona z bazą danych Supabase."
+    },
+    "streamline": {
+      "title": "StreamLine",
+      "description": "Zwiększ produktywność i uprość swoje procesy dzięki naszej intuicyjnej platformie SaaS. Zoptymalizowana pod kątem szybkości, zaprojektowana z myślą o bezpieczeństwie i oferująca wnikliwe analizy."
+    },
+    "freeai": {
+      "title": "FreeAi",
+      "description": "Narzędzie AI umożliwiające tłumaczenie podanego tekstu na inny język. Użytkownicy mogą wybrać język źródłowy i docelowy."
+    }
+  },
+  "education": {
+    "title": "Edukacja",
+    "school": {
+      "date": "2022 - 2025",
+      "title": "Technikum Programistyczne",
+      "subtitle": "Technik Programista",
+      "description": "Uczeń kierunku Technik Programista. Zdobyty certyfikat kwalifikacji zawodowej INF0.3 Technik Programista."
+    }
+  },
+  "courses": {
+    "title": "Kursy i Certyfikaty",
+    "items": {
+      "react": {
+        "date": "2024",
+        "title": "Kurs React na Udemy",
+        "subtitle": "Udemy",
+        "description": "Kompleksowy kurs rozwoju w React obejmujący nowoczesne wzorce, hooki i najlepsze praktyki."
+      },
+      "ai": {
+        "date": "2024",
+        "title": "AI dla grafików",
+        "subtitle": "Certyfikat Profesjonalny",
+        "description": "Podstawy sztucznej inteligencji skupione na technikach generowania obrazów i filmów AI."
+      },
+      "inf03": {
+        "date": "2024",
+        "title": "Certyfikat kwalifikacji zawodowej INF0.3",
+        "subtitle": "Technik Programista",
+        "description": "Profesjonalny certyfikat kwalifikacji dla Technika Programisty."
+      },
+      "ad": {
+        "date": "2023",
+        "title": "Zarządzanie usługą Active Directory",
+        "subtitle": "Microsoft Windows Server",
+        "description": "Zarządzanie usługą Active Directory w środowisku Microsoft Windows Server."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt"
   }
 }
