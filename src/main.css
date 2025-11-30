@@ -1,9 +1,8 @@
 /* 1. CSS Reset & Global Variables */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Fonts */
-  --font-primary: 'Space Grotesk', sans-serif; /* More character than Inter */
+  --font-primary: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   
   /* Colors - Premium Dark Theme */
@@ -12,7 +11,7 @@
   --color-surface-hover: #1e1e1e;
   --color-text-main: #ffffff;
   --color-text-muted: #a1a1aa;
-  --color-accent: #6366f1; /* Indigo-500 */
+  --color-accent: #6366f1;
   --color-accent-glow: rgba(99, 102, 241, 0.5);
   --color-border: #27272a;
   

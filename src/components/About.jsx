@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Section from './Section'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
-const BentoItem = ({ children, className = '', delay = 0 }) => (
+const BentoItem = memo(({ children, className = '', delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -22,7 +22,9 @@ const BentoItem = ({ children, className = '', delay = 0 }) => (
   >
     {children}
   </motion.div>
-)
+))
+
+BentoItem.displayName = 'BentoItem'
 
 const About = () => {
   const { t } = useTranslation()
@@ -77,4 +79,4 @@ const About = () => {
   )
 }
 
-export default About
+export default memo(About)

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Section from './Section'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
-const ProjectCard = ({ title, description, tags, link, color }) => {
+const ProjectCard = memo(({ title, description, tags, link, color }) => {
   return (
     <motion.a
       href={link}
@@ -23,7 +23,8 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
         position: 'relative',
         overflow: 'hidden',
         textDecoration: 'none',
-        marginBottom: '2rem'
+        marginBottom: '2rem',
+        willChange: 'transform'
       }}
     >
       <div style={{ position: 'relative', zIndex: 2 }}>
@@ -97,7 +98,9 @@ const ProjectCard = ({ title, description, tags, link, color }) => {
       }} />
     </motion.a>
   )
-}
+})
+
+ProjectCard.displayName = 'ProjectCard'
 
 const Projects = () => {
   const { t } = useTranslation()
@@ -151,4 +154,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default memo(Projects)
